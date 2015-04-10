@@ -94,7 +94,7 @@ namespace LeagueSharp.Common
         private static AttackableUnit _lastTarget;
         private static readonly Obj_AI_Hero Player;
         private static int _delay;
-        private static float _minDistance = 10;//400;
+        private static float _minDistance = 100;//400;
         private static readonly Random _random = new Random(DateTime.Now.Millisecond);
 
         static Orbwalking()
@@ -300,7 +300,7 @@ namespace LeagueSharp.Common
             float holdAreaRadius = 0,
             bool overrideTimer = false,
             bool useFixedDistance = true,
-            bool randomizeMinDistance = true)
+            bool randomizeMinDistance = false)//true)
         {
             if (Utils.TickCount - LastMoveCommandT < _delay && !overrideTimer)
             {
@@ -354,7 +354,7 @@ namespace LeagueSharp.Common
             float extraWindup = 90,
             float holdAreaRadius = 0,
             bool useFixedDistance = true,
-            bool randomizeMinDistance = true)
+            bool randomizeMinDistance = false)//true)
         {
             try
             {

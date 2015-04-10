@@ -300,7 +300,7 @@ namespace LeagueSharp.Common
             float holdAreaRadius = 0,
             bool overrideTimer = false,
             bool useFixedDistance = true,
-            bool randomizeMinDistance = true)
+            bool randomizeMinDistance = false)//true)
         {
             if (Utils.TickCount - LastMoveCommandT < _delay && !overrideTimer)
             {
